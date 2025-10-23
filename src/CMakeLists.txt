@@ -91,6 +91,8 @@ endif()
 add_library(oqs kem/kem.c
                 ${KEM_OBJS}
                 sig/sig.c
+                sig/oqs_ntt_api.c
+                sig/falcon_clean_ntt.c
                 ${SIG_OBJS}
                 sig_stfl/sig_stfl.c
                 ${SIG_STFL_OBJS}
