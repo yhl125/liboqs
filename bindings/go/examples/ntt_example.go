@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"liboqs/bindings/go/ntt"
 	"log"
+
+	"github.com/yhl125/liboqs/bindings/go/ntt"
 )
 
 func main() {

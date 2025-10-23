@@ -97,7 +97,7 @@ func MLDSA_NTT(poly *MLDSAPolynomial, level MLDSALevel) error {
 	case MLDSA87:
 		C.OQS_SIG_ml_dsa_87_ref_ntt(cPoly)
 	default:
-		C.OQS_SIG_ml_dsa_44_ref_ntt(cPoly)
+		return errors.New("invalid ML-DSA security level")
 	}
 
 	return nil
@@ -132,7 +132,7 @@ func MLDSA_InvNTT_ToMont(poly *MLDSAPolynomial, level MLDSALevel) error {
 	case MLDSA87:
 		C.OQS_SIG_ml_dsa_87_ref_invntt_tomont(cPoly)
 	default:
-		C.OQS_SIG_ml_dsa_44_ref_invntt_tomont(cPoly)
+		return errors.New("invalid ML-DSA security level")
 	}
 
 	return nil
@@ -167,7 +167,7 @@ func MLDSA_InvNTT(poly *MLDSAPolynomial, level MLDSALevel) error {
 	case MLDSA87:
 		C.OQS_SIG_ml_dsa_87_ref_invntt(cPoly)
 	default:
-		C.OQS_SIG_ml_dsa_44_ref_invntt(cPoly)
+		return errors.New("invalid ML-DSA security level")
 	}
 
 	return nil

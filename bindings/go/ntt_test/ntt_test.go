@@ -1,9 +1,10 @@
 package ntt_test
 
 import (
-	"liboqs/bindings/go/ntt"
 	"math/rand"
 	"testing"
+
+	"github.com/yhl125/liboqs/bindings/go/ntt"
 )
 
 // TestMLDSA_NTT_Roundtrip verifies NTT/InvNTT roundtrip correctness for all ML-DSA security levels

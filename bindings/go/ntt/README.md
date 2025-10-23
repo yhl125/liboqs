@@ -44,7 +44,7 @@ package main
 
 import (
     "fmt"
-    "liboqs/oqs/ntt"
+    "github.com/yhl125/liboqs/bindings/go/ntt"
     "log"
 )
 
@@ -78,7 +78,7 @@ package main
 
 import (
     "fmt"
-    "liboqs/oqs/ntt"
+    "github.com/yhl125/liboqs/bindings/go/ntt"
     "log"
 )
 

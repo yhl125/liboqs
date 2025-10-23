@@ -93,34 +93,40 @@ bindings/go/
 
 ## Usage in Other Projects
 
-### Method 1: Local Development
+### Method 1: GitHub
+
+After pushing to GitHub with a tag:
+
+```bash
+go get github.com/yhl125/liboqs/bindings/go/ntt@v0.1.0
+```
+
+Then in your code:
+
+```go
+import "github.com/yhl125/liboqs/bindings/go/ntt"
+```
+
+### Method 2: Local Development
 
 In your project's `go.mod`:
 
 ```go
 module my-project
 
-replace liboqs/bindings/go => /path/to/liboqs/bindings/go
+replace github.com/yhl125/liboqs/bindings/go => /path/to/liboqs/bindings/go
 
-require liboqs/bindings/go v0.0.0
+require github.com/yhl125/liboqs/bindings/go v0.0.0
 ```
 
-### Method 2: GitHub
-
-After pushing to GitHub:
-
-```bash
-go get github.com/yhl125/liboqs/bindings/go/ntt@feature/ntt-cgo-bindings
-```
-
-**Important:** Users must have liboqs installed on their system!
+**Important:** Users must have liboqs C library installed on their system!
 
 ## API Overview
 
 ### ML-DSA (FIPS 204)
 
 ```go
-import "liboqs/bindings/go/ntt"
+import "github.com/yhl125/liboqs/bindings/go/ntt"
 
 var poly ntt.MLDSAPolynomial
 ntt.MLDSA_NTT(&poly, ntt.MLDSA44)
@@ -130,6 +136,8 @@ ntt.MLDSA_InvNTT(&poly, ntt.MLDSA44)
 ### Falcon
 
 ```go
+import "github.com/yhl125/liboqs/bindings/go/ntt"
+
 poly := make(ntt.FalconPolynomial, 512)
 ntt.Falcon_NTT(&poly, ntt.Falcon512LogN)
 ntt.Falcon_InvNTT(&poly, ntt.Falcon512LogN)
