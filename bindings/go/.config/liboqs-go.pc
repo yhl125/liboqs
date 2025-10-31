@@ -1,6 +1,6 @@
 prefix=${pcfiledir}/../../..
 libdir=${prefix}/build/lib
-includedir=${prefix}/include
+includedir=${prefix}/build/include
 
 Name: liboqs-go
 Description: liboqs Go bindings pkg-config file

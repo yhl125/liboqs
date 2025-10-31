@@ -98,7 +98,7 @@ bindings/go/
 After pushing to GitHub with a tag:
 
 ```bash
-go get github.com/yhl125/liboqs/bindings/go/ntt@v0.1.3
+go get github.com/yhl125/liboqs/bindings/go/ntt@v0.1.4
 ```
 
 Then in your code:
