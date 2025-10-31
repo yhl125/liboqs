@@ -42,15 +42,15 @@ extern int32_t pqcrystals_ml_dsa_87_ref_freeze(int32_t a);
  * ML-DSA-44 Reference Implementation Wrappers
  * ============================================================================ */
 
-void OQS_SIG_ml_dsa_44_ref_ntt(int32_t a[256]) {
+OQS_API void OQS_SIG_ml_dsa_44_ref_ntt(int32_t a[256]) {
     pqcrystals_ml_dsa_44_ref_ntt(a);
 }
 
-void OQS_SIG_ml_dsa_44_ref_invntt_tomont(int32_t a[256]) {
+OQS_API void OQS_SIG_ml_dsa_44_ref_invntt_tomont(int32_t a[256]) {
     pqcrystals_ml_dsa_44_ref_invntt_tomont(a);
 }
 
-void OQS_SIG_ml_dsa_44_ref_invntt(int32_t a[256]) {
+OQS_API void OQS_SIG_ml_dsa_44_ref_invntt(int32_t a[256]) {
     pqcrystals_ml_dsa_44_ref_invntt_tomont(a);
     // Apply Montgomery reduction and freeze to get standard form [0, Q-1]
     for (int i = 0; i < 256; i++) {
@@ -63,15 +63,15 @@ void OQS_SIG_ml_dsa_44_ref_invntt(int32_t a[256]) {
  * ML-DSA-65 Reference Implementation Wrappers
  * ============================================================================ */
 
-void OQS_SIG_ml_dsa_65_ref_ntt(int32_t a[256]) {
+OQS_API void OQS_SIG_ml_dsa_65_ref_ntt(int32_t a[256]) {
     pqcrystals_ml_dsa_65_ref_ntt(a);
 }
 
-void OQS_SIG_ml_dsa_65_ref_invntt_tomont(int32_t a[256]) {
+OQS_API void OQS_SIG_ml_dsa_65_ref_invntt_tomont(int32_t a[256]) {
     pqcrystals_ml_dsa_65_ref_invntt_tomont(a);
 }
 
-void OQS_SIG_ml_dsa_65_ref_invntt(int32_t a[256]) {
+OQS_API void OQS_SIG_ml_dsa_65_ref_invntt(int32_t a[256]) {
     pqcrystals_ml_dsa_65_ref_invntt_tomont(a);
     // Apply Montgomery reduction and freeze to get standard form [0, Q-1]
     for (int i = 0; i < 256; i++) {
@@ -84,15 +84,15 @@ void OQS_SIG_ml_dsa_65_ref_invntt(int32_t a[256]) {
  * ML-DSA-87 Reference Implementation Wrappers
  * ============================================================================ */
 
-void OQS_SIG_ml_dsa_87_ref_ntt(int32_t a[256]) {
+OQS_API void OQS_SIG_ml_dsa_87_ref_ntt(int32_t a[256]) {
     pqcrystals_ml_dsa_87_ref_ntt(a);
 }
 
-void OQS_SIG_ml_dsa_87_ref_invntt_tomont(int32_t a[256]) {
+OQS_API void OQS_SIG_ml_dsa_87_ref_invntt_tomont(int32_t a[256]) {
     pqcrystals_ml_dsa_87_ref_invntt_tomont(a);
 }
 
-void OQS_SIG_ml_dsa_87_ref_invntt(int32_t a[256]) {
+OQS_API void OQS_SIG_ml_dsa_87_ref_invntt(int32_t a[256]) {
     pqcrystals_ml_dsa_87_ref_invntt_tomont(a);
     // Apply Montgomery reduction and freeze to get standard form [0, Q-1]
     for (int i = 0; i < 256; i++) {

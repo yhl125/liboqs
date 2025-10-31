@@ -33,6 +33,7 @@
  * @author   Thomas Pornin <thomas.pornin@nccgroup.com>
  */
 
+#include <oqs/common.h>
 #include <stdint.h>
 #include <stddef.h>
 
@@ -412,7 +413,7 @@ mq_montymul(uint32_t x, uint32_t y) {
  *
  * NOTE: static keyword removed for OQS NTT API exposure
  */
-void
+OQS_API void
 FALCON_CLEAN_mq_NTT(uint16_t *a, unsigned logn) {
 	size_t n, t, m;
 
@@ -446,7 +447,7 @@ FALCON_CLEAN_mq_NTT(uint16_t *a, unsigned logn) {
  *
  * NOTE: static keyword removed for OQS NTT API exposure
  */
-void
+OQS_API void
 FALCON_CLEAN_mq_iNTT(uint16_t *a, unsigned logn) {
 	size_t n, t, m;
 	uint32_t ni;

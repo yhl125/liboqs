@@ -19,6 +19,7 @@
 #ifndef OQS_NTT_API_H
 #define OQS_NTT_API_H
 
+#include <oqs/common.h>
 #include <stdint.h>
 
 #if defined(__cplusplus)
@@ -43,7 +44,7 @@ extern "C" {
  *
  * @param a Pointer to array of 256 int32_t coefficients (input/output)
  */
-void OQS_SIG_ml_dsa_44_ref_ntt(int32_t a[256]);
+OQS_API void OQS_SIG_ml_dsa_44_ref_ntt(int32_t a[256]);
 
 /**
  * @brief ML-DSA-44 Reference Implementation - Inverse NTT with Montgomery
@@ -53,7 +54,7 @@ void OQS_SIG_ml_dsa_44_ref_ntt(int32_t a[256]);
  *
  * @param a Pointer to array of 256 int32_t coefficients (input/output)
  */
-void OQS_SIG_ml_dsa_44_ref_invntt_tomont(int32_t a[256]);
+OQS_API void OQS_SIG_ml_dsa_44_ref_invntt_tomont(int32_t a[256]);
 
 /**
  * @brief ML-DSA-44 Reference Implementation - Inverse NTT
@@ -63,43 +64,43 @@ void OQS_SIG_ml_dsa_44_ref_invntt_tomont(int32_t a[256]);
  *
  * @param a Pointer to array of 256 int32_t coefficients (input/output)
  */
-void OQS_SIG_ml_dsa_44_ref_invntt(int32_t a[256]);
+OQS_API void OQS_SIG_ml_dsa_44_ref_invntt(int32_t a[256]);
 
 /**
  * @brief ML-DSA-65 Reference Implementation - Forward NTT
  * @param a Pointer to array of 256 int32_t coefficients (input/output)
  */
-void OQS_SIG_ml_dsa_65_ref_ntt(int32_t a[256]);
+OQS_API void OQS_SIG_ml_dsa_65_ref_ntt(int32_t a[256]);
 
 /**
  * @brief ML-DSA-65 Reference Implementation - Inverse NTT with Montgomery
  * @param a Pointer to array of 256 int32_t coefficients (input/output)
  */
-void OQS_SIG_ml_dsa_65_ref_invntt_tomont(int32_t a[256]);
+OQS_API void OQS_SIG_ml_dsa_65_ref_invntt_tomont(int32_t a[256]);
 
 /**
  * @brief ML-DSA-65 Reference Implementation - Inverse NTT
  * @param a Pointer to array of 256 int32_t coefficients (input/output)
  */
-void OQS_SIG_ml_dsa_65_ref_invntt(int32_t a[256]);
+OQS_API void OQS_SIG_ml_dsa_65_ref_invntt(int32_t a[256]);
 
 /**
  * @brief ML-DSA-87 Reference Implementation - Forward NTT
  * @param a Pointer to array of 256 int32_t coefficients (input/output)
  */
-void OQS_SIG_ml_dsa_87_ref_ntt(int32_t a[256]);
+OQS_API void OQS_SIG_ml_dsa_87_ref_ntt(int32_t a[256]);
 
 /**
  * @brief ML-DSA-87 Reference Implementation - Inverse NTT with Montgomery
  * @param a Pointer to array of 256 int32_t coefficients (input/output)
  */
-void OQS_SIG_ml_dsa_87_ref_invntt_tomont(int32_t a[256]);
+OQS_API void OQS_SIG_ml_dsa_87_ref_invntt_tomont(int32_t a[256]);
 
 /**
  * @brief ML-DSA-87 Reference Implementation - Inverse NTT
  * @param a Pointer to array of 256 int32_t coefficients (input/output)
  */
-void OQS_SIG_ml_dsa_87_ref_invntt(int32_t a[256]);
+OQS_API void OQS_SIG_ml_dsa_87_ref_invntt(int32_t a[256]);
 
 /* ============================================================================
  * Falcon NTT Functions (Clean/Portable Implementation)
@@ -124,7 +125,7 @@ void OQS_SIG_ml_dsa_87_ref_invntt(int32_t a[256]);
  * @param a Pointer to array of uint16_t coefficients (input/output)
  * @param logn Base-2 logarithm of polynomial degree (9 for n=512, 10 for n=1024)
  */
-void FALCON_CLEAN_mq_NTT(uint16_t *a, unsigned logn);
+OQS_API void FALCON_CLEAN_mq_NTT(uint16_t *a, unsigned logn);
 
 /**
  * @brief Falcon Clean Implementation - Inverse NTT
@@ -135,7 +136,7 @@ void FALCON_CLEAN_mq_NTT(uint16_t *a, unsigned logn);
  * @param a Pointer to array of uint16_t coefficients (input/output)
  * @param logn Base-2 logarithm of polynomial degree (9 for n=512, 10 for n=1024)
  */
-void FALCON_CLEAN_mq_iNTT(uint16_t *a, unsigned logn);
+OQS_API void FALCON_CLEAN_mq_iNTT(uint16_t *a, unsigned logn);
 
 #if defined(__cplusplus)
 }
