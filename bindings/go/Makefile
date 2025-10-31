@@ -6,7 +6,7 @@ BUILD_DIR := $(LIBOQS_ROOT)/build
 CONFIG_DIR := .config
 
 # Build configuration
-CMAKE_FLAGS := -DBUILD_SHARED_LIBS=ON
+CMAKE_FLAGS := -G Ninja -DBUILD_SHARED_LIBS=ON
 NINJA_JOBS := 8
 
 # Library paths
@@ -47,9 +47,9 @@ all: liboqs go
 
 liboqs:
 	@echo -e "$(YELLOW)Building liboqs C library...$(NC)"
-	@if [ ! -d "$(BUILD_DIR)" ]; then \
+	@if [ ! -f "$(BUILD_DIR)/build.ninja" ]; then \
 		mkdir -p $(BUILD_DIR); \
-		cd $(BUILD_DIR) && cmake $(LIBOQS_ROOT) $(CMAKE_FLAGS); \
+		cd $(BUILD_DIR) && cmake $(CMAKE_FLAGS) ..; \
 	fi
 	@cd $(BUILD_DIR) && ninja -j$(NINJA_JOBS)
 	@echo -e "$(GREEN)✓ liboqs built$(NC)"

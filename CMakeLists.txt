@@ -226,7 +226,8 @@ set(PUBLIC_HEADERS ${PROJECT_SOURCE_DIR}/src/oqs.h
                    ${PROJECT_SOURCE_DIR}/src/common/sha3/sha3x4_ops.h
                    ${PROJECT_SOURCE_DIR}/src/kem/kem.h
                    ${PROJECT_SOURCE_DIR}/src/sig/sig.h
-                   ${PROJECT_SOURCE_DIR}/src/sig_stfl/sig_stfl.h)
+                   ${PROJECT_SOURCE_DIR}/src/sig_stfl/sig_stfl.h
+                   ${PROJECT_SOURCE_DIR}/include/oqs/oqs_ntt_api.h)
 
 set(INTERNAL_HEADERS ${PROJECT_SOURCE_DIR}/src/common/aes/aes.h
                      ${PROJECT_SOURCE_DIR}/src/common/rand/rand_nist.h
